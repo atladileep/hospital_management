@@ -1,0 +1,9 @@
+.container{
+    width: 140vh;
+    padding-right: 70vh;
+}
+.bg{
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}

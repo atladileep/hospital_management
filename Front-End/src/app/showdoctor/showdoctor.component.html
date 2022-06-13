@@ -1,0 +1,32 @@
+<div class="container" >
+  <form class="form-inline">
+    <div class="d-flex justify-content-center align-items-center">
+      <label for="doctor">Select Doctor</label>
+      <select class="form-control" [(ngModel)]="doc.name" name="name">
+        <option [value]="docs.name" *ngFor="let docs of doctor">{{docs.name}}</option>
+      </select>
+      <button class="btn btn-outline-primary " type="submit" (click)="showDoctorDetails()">Search
+          </button>
+        </div>
+  </form>
+</div>
+<!--  -->
+  <div class="p-5 text-center">
+    <div class="mask" style="background-color:#ffffff;">
+    <div class="d-flex justify-content-center align-items-center">
+        <table border="4" style="width: 100%;">
+              <tr>
+                <th scope="col" style="color: rgb(255, 0, 123);">Doctor Name</th>
+                <th scope="col" style="color: rgb(255, 0, 123);">Doctor Specialization</th>
+                <th scope="col" style="color: rgb(255, 0, 123);">Number of Patients Attended</th>
+              </tr>
+              <tr>
+                <td>{{doc.name}}</td>
+                <td>{{doc.field}}</td>
+                <td>{{doc.patient_count}}</td>
+              </tr>
+          </table>
+    </div>
+    </div>
+</div>
+  <!--  -->

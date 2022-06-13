@@ -1,0 +1,51 @@
+<div class="bg" style="background-image: url(assets/images/Patient.jpg)">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="h3 fw-bold text-dark my-4">Patient Information
+        </div>
+        <div class="col-md-4">
+          <form>
+            <div class="mb-2">
+              <label for="">Enter Patient Id</label>
+              <input name="id" [(ngModel)]="patient.id" required="true" type="number" class="form-control" placeholder="patient Id">
+            </div>
+            <div class="mb-2">
+              <label for="">Enter Patient Name</label>
+              <input name="name" [(ngModel)]="patient.name" required="true" type="text" class="form-control" placeholder="patient name">
+            </div>
+            <div class="mb-2">
+              <label for="">Enter Patient Age</label>
+              <input name="age" required="true" [(ngModel)]="patient.age" type="number" class="form-control" placeholder="Enter age">
+            </div>
+            <div class="mb-2">
+              <label for="gender">Choose Patient Gender</label>
+              <select id="gender" class="form-control" [(ngModel)]="patient.gender" name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="others">Others</option>
+              </select>
+            </div>
+            <div class="mb-2">
+              <label for="">Enter Doctor Name</label>
+              <select class="form-control" [(ngModel)]="patient.doctor_name" name="name">
+                <option value="">Choose Doctor</option>
+                <option *ngFor="let doctor of doctors" value="{{doctor.name}}">{{doctor.name}}</option>
+            </select>
+          </div>
+            <div class="mb-2">
+              <label for="">Date Of Admission</label>
+              <input name="field" required="true" [(ngModel)]="patient.date_of_visit" type="date" class="form-control" placeholder="Enter date of admission">
+            </div>
+          
+            <div class="mb-2 d-flex flex-row justify-content-center">
+              <button type="submit" (click)="savePatient()" class="btn btn-success">Admit</button>
+              <a routerLink="/" class="btn btn-danger ms-2">Close</a>
+            </div>
+  
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <pre>{{patient|json}}</pre> -->

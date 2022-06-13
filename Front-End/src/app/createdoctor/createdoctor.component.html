@@ -1,0 +1,49 @@
+<div class="bg" style="background-image: url(assets/images/Hospital.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="h1 fw-bold text-dark">Doctor Information 
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container" style="background-image: url(assets/images/Doctor2.jpg)">
+    <div class="row">
+      <div class="col-md-4">
+        <form>
+          <div class="mb-2">
+            <label for="">Enter Doctor Id</label>
+            <input name="name" [(ngModel)]="doctor.id" name="id" [value]="doctor.id" required="true" type="number" class="form-control" placeholder="Doctor id">
+          </div>
+          <div class="mb-2">
+            <label for="">Enter Doctor Name</label>
+            <input name="name" [(ngModel)]="doctor.name" name="name" [value]="doctor.name" required="true" type="text" class="form-control" placeholder="Doctor name">
+          </div>
+          <div class="mb-2">
+            <label for="">Enter Doctor Specialization</label>
+            <input name="field" [(ngModel)]="doctor.field" name="field" [value]="doctor.field" required="true" type="text" class="form-control" placeholder="Enter Field">
+          </div>
+          <div class="mb-2">
+            <label for="">Enter Doctor Age</label>
+            <input name="age" [(ngModel)]="doctor.age" name="age" [value]="doctor.age" required="true" type="number" class="form-control" placeholder="Enter age">
+          </div>
+          <div class="mb-2">
+            <label for="gender">Select Doctor Gender</label>
+            <select id="gender"[(ngModel)]="doctor.gender" [value]="doctor.gender" class="form-control" name="gender">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="others">Others</option>
+            </select>
+          </div>
+          <div class="mb-2 d-flex flex-row justify-content-center">
+            <button type="submit" (click)="saveDoctor()" class="btn btn-success">Add</button>
+            <a routerLink="/" class="btn btn-primary ms-2">Close</a>
+          </div>
+
+        </form>
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!-- <pre>{{doctor | json}}</pre> -->
